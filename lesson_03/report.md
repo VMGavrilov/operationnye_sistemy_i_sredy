@@ -133,6 +133,10 @@ journalctl -t sudo | grep "NOT in sudoers"
 
 Вывод: guest не входит в sudo, попытка sudo whoami отклонена и зафиксирована в журнале. Это пример работы принципа минимальных привилегий.
 
+# Практическая работа
+
+OS45.eyJ2IjoxLCJuIjoi0JPQsNCy0YDQuNC70L7QsiDQktC70LDQtNC40YHQu9Cw0LIiLCJnIjoi0KDQn9CeLzEiLCJhIjpbIjAxMiIsIjM1IiwiMCIsIjAyNCIsIjAxMjM1NiIsIjAxMjM0IiwiMCIsIjAxMiIsIjAxNCIsIjM1NjdhIiwiMTIzNDU2IiwiOSIsIjAiLCIwIiwiMDAwMTExMiIsIjAxMjM0NSIsIjAxMjM0NSIsIjAiLCIyIiwiMjIyMDM0NDAwIiwiMDEyMzQ1NiIsIjAxNDI0IiwiMCIsIjAxMiIsIjAiLCIyIiwiNzExIiwiMDIxMyIsIjAwMTExMTAiLCIwIiwiMDEyMzQiLCIwMTIzIiwiMDEyIiwiMjM0NSIsIjAxMTAwMDEiLCIwIiwiMDEyIiwiMTM0IiwiMCIsIjEzIl0sInMiOjI3LCJ0Ijo0MCwibSI6NCwiZCI6IjIwMjYtMTAtMTRUMTg6MTMiLCJ1IjoyMiwibyI6MCwieCI6MH0.5cad882a92
+
 ## Перед сдачей
 
 - [+] Проверка: 21 из 21.
