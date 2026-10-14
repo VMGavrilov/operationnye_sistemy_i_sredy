@@ -234,9 +234,24 @@ find model-root -type f
 | `/var/log/shop-api/access.log` | **Оставить** | `/var/log/shop-api/access.log` | Логи приложения в `/var/log/<app>/` — правильно. |
 | `/var/lib/shop-api/database.db` | **Оставить** | `/var/lib/shop-api/database.db` | База данных в `/var/lib/<app>/` — правильно. |
 
+# Таблица каталогов для службы backup-agent
+
+| Файл | Каталог | Основание |
+|---|---|---|
+| Программа (исполняемый файл) | `/usr/bin/backup-agent` | FHS: исполняемые файлы для всех пользователей — в `/usr/bin` или `/usr/local/bin`. |
+| Настройки | `/etc/backup-agent/config.conf` | FHS: конфиги системы и приложений — в `/etc/<app>/`. |
+| Журнал | `/var/log/backup-agent/backup.log` | FHS: логи приложений — в `/var/log/<app>/`. |
+| Список сделанных копий (каталог-индекс) | `/var/lib/backup-agent/index.db` | FHS: изменяемые данные приложения — в `/var/lib/<app>/`. |
+| Номер процесса (PID) | `/run/backup-agent.pid` | FHS: PID-файлы текущего запуска — в `/run`. |
+| Сами резервные копии | `/srv/backup/` (или `/mnt/backup/`) | FHS: данные, обслуживаемые системой (в т.ч. бэкапы), — в `/srv`. Внешний постоянный носитель монтируется в `/mnt` или отдельный `/srv/backup`. |
+
+# Практическая работа
+
+OS03.eyJ2IjoxLCJuIjoi0JPQsNCy0YDQuNC70L7QsiDQktC70LDQtNC40YHQu9Cw0LIg0JzQuNGF0LDQudC70L7QstC40YciLCJnIjoi0KDQn9CeLzEiLCJhIjpbIjUwNzg4NjIzIiwiMDE2NDMiLCIwMTIzNDUiLCIxMTEwMTAwMCIsIjAwMDAxMTExMSIsIjAyMzQ1Nzg5IiwiNzY1MDI3NjAiLCIwIiwiMCIsIjAiLCIwMTIiLCIwIiwiMDEiLCIwMTIzNDUwMSIsIjAxMjMiLCIwIiwiMCIsIjAxMjMiLCIxMTAwMDExIiwiMDEyMzQiLCIzNDU2IiwiMjM0IiwiMzQiLCIwIiwiMDEyMzQ1IiwiMyIsIjAyMTM0NSIsIjAiLCIwMTc4IiwiMDIiLCIwMzQiLCIwMzQiLCIxN2MiLCI3IiwiMTU2ODkiLCIwMTUiLCI0MDY1MjMiLCIyMjMxMTAwMCIsIjAiLCIwMTIzNDUiXSwicyI6MzMsInQiOjQwLCJtIjo0LCJkIjoiMjAyNi0xMC0xNFQxNTozMSIsInUiOjI3LCJvIjowLCJ4IjowfQ.3c96dcae75
+
 ## Перед сдачей
 
-- [ ] tmpfs отключена или ошибка описана.
-- [ ] Снимки открываются.
-- [ ] Результаты получены в моей системе.
-- [ ] Работа сохранена на внешнем носителе.
+- [+] tmpfs отключена или ошибка описана.
+- [+] Снимки открываются.
+- [+] Результаты получены в моей системе.
+- [+] Работа сохранена на внешнем носителе.
